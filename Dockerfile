@@ -28,12 +28,12 @@ RUN apt-get update -y \
 # Selenium
 #==========
 RUN mkdir -p /opt/selenium \
- && wget --no-verbose http://selenium-release.storage.googleapis.com/2.48/selenium-server-standalone-2.48.2.jar -O /opt/selenium/selenium-server-standalone.jar
+ && wget --no-verbose http://selenium-release.storage.googleapis.com/2.53.2/selenium-server-standalone-v2.53.2.jar -O /opt/selenium/selenium-server-standalone.jar
 
 #===================================
 # Download the latest Chrome driver
 #===================================
-ENV CHROME_DRIVER_VERSION 2.20
+ENV CHROME_DRIVER_VERSION 2.23
 RUN wget --no-verbose -O /tmp/chromedriver_linux64.zip http://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip \
  && rm -rf /opt/selenium/chromedriver \
  && unzip /tmp/chromedriver_linux64.zip -d /opt/selenium \
