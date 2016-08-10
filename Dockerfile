@@ -28,7 +28,7 @@ RUN apt-get update -y \
 # Selenium
 #==========
 RUN mkdir -p /opt/selenium \
- && wget --no-verbose http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-v2.53.1.jar -O /opt/selenium/selenium-server-standalone.jar
+ && wget --no-verbose http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar -O /opt/selenium/selenium-server-standalone.jar
 
 #===================================
 # Download the latest Chrome driver
